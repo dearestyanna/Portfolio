@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn2 {
+    from {
+        opacity: 0;
+        left:0px;
+    }
+
+    to {
+        opacity: 1;
+        left:300px;
+    }
+}
+
+@keyframes transitionIn3 {
+    from {
+        opacity: 0;
+        top:0px;
+    }
+
+    to {
+        opacity: 1;
+        top:730px;
+    }
+}
+
+@keyframes transitionIn5 {
+    from {
+        opacity: 0;
+        left:1920px;
+    }
+
+    to {
+        opacity: 1;
+        left:1200px;
+    }
+}
+
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #ffedee5d;
+        transition: all .5s ease;
+        margin-top:0%;
+        z-index:1000;
+        border:2px solid #ffffff;
+        border-radius:20px;
+        box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+      }
+      .sidebar header {
+        font-size: 22px;
+        color: #f597b0;
+        line-height: 70px;
+        text-align: center;
+        background: #ffedee;
+        user-select: none;
+        margin-top:0%;
+        border-top-right-radius:20px;
+      }
+      .sidebar ul a{
+        display: block;
+        height: 100%;
+        width: 100%;
+        line-height: 65px;
+        font-size: 20px;
+        color: #df5a7d;
+        padding-left: 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        border-top: 1px solid rgba(255, 240, 242, 0.1);
+        transition: .4s;
+        margin-top:0%;
+      }
+      .sidebar ul li:hover a{
+        padding-left: 50px;
+        color:#bd3a5d;
+      }
+      
+      #check{
+        display: none;
+      }
+      label #btn,label #cancel{
+        position: fixed;
+        background: #ffedee;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top:0%;
+      }
+      label #btn{
+        left: 40px;
+        top: 25px;
+        font-size: 30px;
+        color: #e0547a;
+        padding: 4px 12px;
+        transition: all .5s;
+        margin-top:0%;
+      }
+      label #cancel{
+        z-index: 1111;
+        left: -195px;
+        top: 17px;
+        font-size: 30px;
+        color: #e0547a;
+        padding: 2px 9px;
+        transition: all .5s ease;
+        margin-top:0%;
+      }
+      #check:checked ~ .sidebar{
+        left: -40px;
+      }
+      #check:checked ~ label #btn{
+        left: 250px;
+        opacity: 0;
+        pointer-events: none;
+      }
+      #check:checked ~ label #cancel{
+        left: 150px;
+      }
+      
+      *
+{
+    list-style:none;
+    text-decoration:none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+    .box
+      {
+          position:absolute;
+          height:700px;
+          width:900px;
+          background: #ffffff36;
+          border: 2px solid #fff;
+          backdrop-filter:blur(2px);
+          border-radius: 20px;
+          box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+          z-index:2;
+          animation: transitionIn 0.75s;
+          animation-timing-function: ease-out;
+          left:250px;
+          top:150px;
+      }
+
+.magazine
+{
+        position:absolute;
+        object-fit:cover;
+        height:600px;
+        width:400px;
+        border-radius:20px;
+        z-index:3;
+        left:300px;
+        top:190px;
+        border: 2px solid #fff;
+        box-shadow: 2px 2px 11px 0px rgba(185, 74, 98, 0.637);
+        animation: transitionIn2 0.75s;
+        animation-timing-function: ease-out;
+}
+
+.text1
+
+{
+    position:absolute;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color:#bd3a5d;
+    font-size:40px;
+    z-index:5;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    left:740px;
+    top:190px;
+}
+
+.text2
+
+{
+    position:absolute;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color:#df5a7d;
+    font-size:35px;
+    z-index:5;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    left:740px;
+    top:240px;
+}
+
+.box2
+{
+    position:absolute;
+    height:490px;
+    width:370px;
+    background: #ffffff36;
+    border: 2px solid #fff;
+    backdrop-filter:blur(2px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    z-index:2;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    left:740px;
+    top:300px;
+}
+
+.text3
+
+{
+    position:absolute;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color:#f085a2;
+    font-size:30px;
+    z-index:5;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    left:767px;
+    top:320px;
+}
+
+.img
+{
+    position:absolute;
+    z-index:4;
+    border-radius:20px;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    left:757px;
+    top:370px;
+    width:340px;
+    height:340px;
+}
+
+.audio1
+{
+    position:absolute;
+    z-index:1001;
+    left:757px;
+    top:730px;
+    width:340px;
+    animation: transitionIn3 0.75s;
+    animation-timing-function: ease-out;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.text4
+{
+    position:absolute;
+    z-index:9999;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color:#ffedee;
+    font-size:20px;
+    z-index:5;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    left:775px;
+    top:680px;
+}
+
+.cd
+{
+    position:absolute;
+    z-index:3;
+    width:340px;
+    height:340px;
+    left:600px;
+    top:370px;
+    animation:ContinuousRotate 5s linear infinite;
+}
+
+/*CD ANIMATION*/
+@keyframes ContinuousRotate {
+    from {
+        transform:rotate(0deg);
+    }
+
+    to {
+        transform:rotate(360deg)
+    }
+}
+
+.box3
+{
+    position:absolute;
+    height:700px;
+    width:600px;
+    background: #ffffff36;
+    border: 2px solid #fff;
+    backdrop-filter:blur(2px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    z-index:2;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    left:1180px;
+    top:150px;
+}
+
+
+.table1
+{
+    position:absolute;
+    left: 1200px;
+    top:160px;
+    z-index:9999;
+    text-align:left;
+    position:absolute;
+    font-size: 20px;
+    overflow-wrap:break-word;
+    color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    border-radius:20px;
+    padding:10px;
+    margin:10px;
+    width: 550px;
+    height:650px;
+    font-weight:800px;
+    animation: transitionIn5 0.75s;
+    animation-timing-function: ease-out;
+}
+
+.table1 tr, td
+{
+    border: 2px solid #bd3a5d;
+    border-radius:20px;
+    padding:15px;
+    margin:0px;
+
+}
+
+.tr1
+{
+    background-image:linear-gradient(#bd3a5d, #f588a5);
+}
+
+.table1 td
+{
+ background:rgba(230, 106, 133, 0.432);
+ box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+}
+
+.td1
+{
+    font-family: "Outfit", sans-serif;
+    font-size:45px;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    padding:10px;
+    text-align:center;
+}
+
+.td2
+{
+    font-family: "Outfit", sans-serif;
+    font-size:30px;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color:#e0547a;
+}
+
+td ul li 
+{
+    list-style-type:circle;
+}

@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@keyframes TransitionIn {
+  from {
+      opacity: 0;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+  }
+
+  to {
+      opacity: 1;
+}
+}
+
+@keyframes TransitionInBox {
+    from {
+        opacity: 0;
+        left:0px
+    }
+  
+    to {
+        opacity: 1;
+        left:600px;
+  }
+}
+
+body
+{
+    margin:0px;
+    padding:10px;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #ffedee5d;
+  transition: all .5s ease;
+  margin-top:0%;
+  z-index:1000;
+  border:2px solid #ffffff;
+  border-radius:20px;
+  box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+}
+.sidebar header {
+  font-size: 22px;
+  color: #f597b0;
+  line-height: 70px;
+  text-align: center;
+  background: #ffedee;
+  user-select: none;
+  margin-top:0%;
+  border-top-right-radius:20px;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: #df5a7d;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgba(255, 240, 242, 0.1);
+  transition: .4s;
+  margin-top:0%;
+}
+.sidebar ul li:hover a{
+  padding-left: 50px;
+  color:#bd3a5d;
+  }
+  
+  #check{
+    display: none;
+  }
+  label #btn,label #cancel{
+    position: fixed;
+    background: #ffedee;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 30px;
+    color: #e0547a;
+    padding: 4px 12px;
+    transition: all .5s;
+  }
+  label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #e0547a;
+    padding: 2px 9px;
+    transition: all .5s ease;
+  }
+  #check:checked ~ .sidebar{
+    left: -40px;
+  }
+  #check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #check:checked ~ label #cancel{
+    left: 150px;
+  }
+  
+*
+{
+    list-style:none;
+    text-decoration:none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.audio1
+{
+  position:absolute;
+    height:100px;
+    width:800px;
+    background: #ffffff36;
+    border: 2px solid #fff;
+    backdrop-filter:blur(2px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    z-index:2;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    top:100px;
+    left:590px;
+    animation: TransitionIn 0.75s ease;
+}
+
+.audio2
+{
+  position:absolute;
+    height:600px;
+    width:800px;
+    background: #ffffff36;
+    border: 2px solid #fff;
+    backdrop-filter:blur(2px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    z-index:2;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    top:220px;
+    left:590px;
+    animation: TransitionIn 0.75s ease;
+}
+
+.audio3
+{
+  position:absolute;
+    height:50px;
+    width:700px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 11px 0px rgba(209, 108, 130, 0.5);
+    z-index:2;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-out;
+    top:130px;
+    left:640px;
+    animation: TransitionIn 0.75s ease;
+}
+
+.text1
+{
+  font-size: 50px;
+  color:#f597b0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+    border-right:5px solid;
+    width:530px;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:
+        typing 2s steps(19),
+        cursor .4s step-end infinite alternate;
+    position:absolute;
+    height:85px;
+    z-index:4;
+    left: 730px;
+    top:280px;
+}
+
+/*CURSOR BLINKING*/
+@keyframes cursor
+{
+    50% {border-color:transparent}
+}
+
+/*TYPING EFFECT*/
+@keyframes typing {
+    from {width:0}
+}
+
+
+.text2
+{
+  position:absolute;
+  font-size: 35px;
+  overflow-wrap:break-word;
+  color:#e0547a;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff36;
+  padding:20px;
+  left: 630px;
+  top:360px;
+  width:680px;
+  height:260px;
+  z-index:4;
+  border-radius: 10px;
+  animation: TransitionIn 1s;
+  animation-timing-function: ease-out;
+  text-align:justify;
+  text-indent:10%;
+  line-height:40px;
+}
+
+
+.btn
+{
+    position:absolute;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background: #fff7f9;
+    font-size:xx-large;
+    width: 100px;
+    padding:1px;
+    text-align:center;
+    text-decoration:none;
+    color: #ee8ea7;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(139, 51, 70, 0.1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+    z-index:5;
+    animation: TransitionIn 1s;
+    animation-timing-function: ease-out;
+    top:740px;
+    left:640px;
+
+}
+
+.btn2
+{
+    position:absolute;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background: #fff7f9;
+    -webkit-transition-duration: 0.5s;
+    z-index:5;
+    top:740px;
+    left:1150px;
+    width: 160px;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    color: #ee8ea7;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(139, 51, 70, 0.1);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+    animation: transitionIn 2s;
+    animation-timing-function: ease-out;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn2:hover, .btn2:focus, .btn2:active
+{
+    box-shadow: 0 0 20px rgba(139, 51, 70, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.note1
+{
+  position:absolute;
+  width:300px;
+  height:300px;
+  top:500px;
+  left:420px;
+}
+
+.note2
+{
+  position:absolute;
+  width:400px;
+  height:400px;
+  top:300px;
+  left:1200px;
+}
